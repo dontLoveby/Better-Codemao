@@ -4,7 +4,7 @@
 
 # 前往下载
 
-[v2.2.6.20250117](https://github.com/LuYingYiLong/Better-Codemao/releases/tag/v2.2.6.20250117)
+[BetterCodemao2.2.6.20250117](https://github.com/LuYingYiLong/Better-Codemao/releases/tag/v2.2.6.20250117)
 
 # 加入我们
 
