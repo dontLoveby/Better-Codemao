@@ -19,5 +19,5 @@ const ACCENT_BUTTON_DARK = preload("res://Resources/Themes/AccentButton-Dark.tre
 const SIMPLE_BUTTON_LIGHT = preload("res://Resources/Themes/SimpleButton-Light.tres")
 const SIMPLE_BUTTON_DARK = preload("res://Resources/Themes/SimpleButton-Dark.tres")
 
-func _on_pressed():
+func _on_pressed() -> void:
 	on_pressed.emit(index)

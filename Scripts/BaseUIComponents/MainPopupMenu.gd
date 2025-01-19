@@ -25,10 +25,10 @@ const TOLERANCE: int = 4
 
 var items_total: int
 
-func set_pos(pos: Vector2i = Vector2i(536, 274)):
+func set_pos(pos: Vector2i = Vector2i(536, 274)) -> void:
 	position = pos
 
-func _process(delta):
+func _process(delta) -> void:
 	#var items_total: int = items_container.get_child_count()
 	#var target_size_y: int = 40 + (clampi(items_total, 1, 10) * 34)
 	#if items_total == 1: target_size_y -= 10
@@ -55,12 +55,12 @@ func populate_items(items: Array[PopupItem]) -> void:
 		popup_button_component.set_item_text(item.text)
 		popup_button_component.pressed.connect(on_popup_buton_pressed)
 
-func on_popup_buton_pressed(index: int):
+func on_popup_buton_pressed(index: int) -> void:
 	index_pressed.emit(index)
 	focus_exited.emit()
 
-func _on_focus_exited():
+func _on_focus_exited() -> void:
 	visible = false
 
-func _on_close_requested():
+func _on_close_requested() -> void:
 	visible = false

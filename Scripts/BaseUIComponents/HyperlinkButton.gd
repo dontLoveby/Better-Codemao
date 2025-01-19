@@ -2,7 +2,7 @@ extends Button
 
 @export_multiline var hyperlink: String
 
-func parse_hyperlink():
+func parse_hyperlink() -> void:
 	if hyperlink.begins_with("ContentDialog:"):
 		var json_class: JSON = JSON.new()
 		var err = json_class.parse(hyperlink.trim_prefix("ContentDialog:"))

@@ -45,7 +45,7 @@ var last_tab_scene = null
 
 var metadata = null
 
-func _ready():
+func _ready() -> void:
 	if !Engine.is_editor_hint():
 		current_tab = get_index()
 		button.text = text
@@ -92,7 +92,7 @@ func _on_pressed():
 	if metadata != null:
 		metadata_output.emit(metadata)
 
-func _set_infobadge_visible():
+func _set_infobadge_visible() -> void:
 	if infobage_display_mode == 0:
 		info_badge.visible = infobadge_visible
 		info_badge_2.hide()
@@ -100,17 +100,17 @@ func _set_infobadge_visible():
 		info_badge.hide()
 		info_badge_2.visible = infobadge_visible
 
-func _on_mouse_entered():
+func _on_mouse_entered() -> void:
 	color_rect.show()
 
-func _on_mouse_exited():
+func _on_mouse_exited() -> void:
 	if !selected:
 		color_rect.hide()
 
-func play(anim: String):
+func play(anim: String) -> void:
 	animation_player.play(anim)
 
-func _on_animation_player_animation_finished(anim_name):
+func _on_animation_player_animation_finished(anim_name) -> void:
 	animation_finished.emit(anim_name)
 
 func _on_settings_config_update() -> void:

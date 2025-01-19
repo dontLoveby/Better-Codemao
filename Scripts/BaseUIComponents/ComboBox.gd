@@ -17,7 +17,7 @@ signal item_changed(item: PopupItem)
 func _ready() -> void:
 	update_selected_item()
 
-func load_popup_item_from_json(json: Dictionary):
+func load_popup_item_from_json(json: Dictionary) -> void:
 	items.clear()
 	var _items: Array = json.get("items", [])
 	for _item: Dictionary in _items:

@@ -15,7 +15,7 @@ extends PanelContainer
 
 signal search_pressed(text: String)
 
-func _ready():
+func _ready() -> void:
 	line_edit.placeholder_text = placeholder_text
 
 func _on_line_edit_text_changed(new_text: String) -> void:
